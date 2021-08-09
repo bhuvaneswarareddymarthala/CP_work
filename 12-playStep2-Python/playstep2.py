@@ -32,7 +32,42 @@
 # Hint: Then, you may wish to use diceToOrderedHand(a, b, c) at the end to convert the 3 dice back
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
+def handtodice(hand):
+	
+
+	fd = hand //100
+	sd = (hand%100)//10
+	td = (hand%100)%10
+	return fd,sd,td
+def dicetoorderedhand(a, b, c):
+	# your code goes here
+	great = max(a,b,c)
+	small = min(a,b,c)
+	middle = (a+b+c) - (great+small)
+	return great*100+middle*10+small
+
+def match(num):
+	# d1 = (num)//100
+	# d2 =(num%100) /10
+	# d3 =(num%100)%10
+	d1,d2,d3 = handtodice(num)
+	if(d1 == d2 ==d3):
+		return 3
+	elif(d1!=d2!=d3):
+		return 0
+	else:
+		2
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	# d1 = (hand)//100
+	# d2 =(hand%100) /10
+	# d3 =(hand%100)%10
+	d1,d2,d3 = handtodice(hand)
+	compare = match(hand)
+	order = dicetoorderedhand(d1,d2,d3)
+	if compare == 3:
+		return hand,dice
+	
+	
+	
