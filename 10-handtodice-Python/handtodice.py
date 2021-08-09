@@ -7,4 +7,16 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+	# p =[]
+	# while(hand):
+	# 	k = hand%10
+	# 	hand = int(hand/10)
+	# 	p.append(k)
+	
+
+	# return p[::-1]
+
+	fd = hand //100
+	sd = (hand%100)//10
+	td = (hand%100)%10
+	return fd,sd,td
