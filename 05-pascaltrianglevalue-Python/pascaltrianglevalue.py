@@ -6,7 +6,15 @@
 # are not legal values, return None, instead of crashing. 
 
 
-
-
-def fun_pascaltrianglevalue(row, col):
-	return 1
+import math
+                                                                               #oco
+def fun_pascaltrianglevalue(row, col):                                      #1c0   1c2
+	                                                                    #2c0   #2c1 #2c2
+	if row<col:
+		return 0
+	else:
+		l = math.factorial(row)
+		p = math.factorial(row-col)
+		q = math.factorial(col)
+		x = p*q
+		return l/x
