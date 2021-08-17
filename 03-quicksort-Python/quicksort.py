@@ -10,7 +10,7 @@ def part(arr, low, high):
         # equal to pivot
 		if arr[j] <= pivot:
   
-            # increment index of smaller element
+            
 			i = i+1
 			arr[i], arr[j] = arr[j], arr[i]
 	arr[i+1], arr[high] = arr[high], arr[i+1]
