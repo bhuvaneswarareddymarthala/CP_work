@@ -4,7 +4,13 @@
 # 196-algorithm, after the most famous number associated with the process.
 # The first few Lychrel numbers are 196, 295, 394, 493, 592, 689, 691, 788, 790, 879, 887….
 
+def pallin(n):
+	n = str(n)
+	rev = n[::-1]
+	if str(n) == rev:
+		return True
+	return False
 
 def nthlychrelnumbers(n):
 	# your code goes here
-	pass
+	
